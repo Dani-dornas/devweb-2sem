@@ -1,7 +1,7 @@
 import express from "express";
 
 const app = express();
-
+app.use(express.json());
 app.listen(3001);
 
 app.get("/somar/:w/:z", function (req, res) {
@@ -10,6 +10,8 @@ app.get("/somar/:w/:z", function (req, res) {
   res.send({r});
 });
 
-app.post("/teste", function (req, res) {
-  res.send("boa noite");
+app.post("/subtrair", function (req, res) {
+  const {x,y} = req.body;
+  let r = parseFloat(x) - parseFloat(y);
+  res.send({r});
 });
