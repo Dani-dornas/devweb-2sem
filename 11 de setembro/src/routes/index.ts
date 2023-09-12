@@ -6,6 +6,7 @@ import bike from './bike';
 import rent from './rent';
 import photo from './photo';
 
+
 const routes = Router();
 
 routes.use("/bike", bike);
