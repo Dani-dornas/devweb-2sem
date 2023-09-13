@@ -1,27 +1,15 @@
-import axios from "axios";
-import { useState } from "react";
+import Brand from "./pages/Brand";
+import Category from "./pages/Category";
+import User from "./pages/User";
 
 function App() {
-  const [name, setName] = useState ("");
-  
-  function salvar(){
-    axios.post("http://localhost:3001/marca", {name})
-    .then( ({data}) => console.log(data));
-  }
-
   return (
-  
-  <div>
-    <input 
-    value = {name} 
-    onChange = {(e) => setName(e.target.value)} 
-    placeholder = "Digite o nome" 
-    />
-    <div>{name}</div>
-    <button onClick={salvar}>Salvar</button>
-  </div>
-  
+    <div>
+      <Brand />
+      <Category />
+      <User />
+    </div>
   );
-}
+} 
 
 export default App;
