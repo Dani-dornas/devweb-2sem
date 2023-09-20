@@ -48,18 +48,18 @@ function Bike() {
     longitude && longitude.trim() !== ""
     ) {
       const res: any = await service.post({
-        color:color.trim(),
-        size:size.trim(),
-        material:material.trim(),
-        gender:gender.trim(),
-        speedkit:speedkit.trim(),
-        rim:rim.trim(),
-        suspension:suspension.trim(),
-        description:description.trim(),
-        hourlyvalue:hourlyvalue.trim(),
-        dailyvalue:dailyvalue.trim(),
-        latitude:latitude.trim(),
-        longitude:longitude.trim()
+        color: color.trim(),
+        size: size.trim(),
+        material: material.trim(),
+        gender: gender.trim(),
+        speedkit: speedkit.trim(),
+        rim: rim.trim(),
+        suspension: suspension.trim(),
+        description: description.trim(),
+        hourlyvalue: hourlyvalue.trim(),
+        dailyvalue: dailyvalue.trim(),
+        latitude: latitude.trim(),
+        longitude: longitude.trim()
       });
       if (res.error) {
         alert(res.error);
@@ -147,9 +147,18 @@ function Bike() {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Codinome</th>
-            <th>Email</th>
-            <th>Telefone</th>
+            <th>Cor</th>
+            <th>Tamanho</th>
+            <th>Material</th>
+            <th>Gênero</th>
+            <th>Marcha</th>
+            <th>Aro</th>
+            <th>Suspensão</th>
+            <th>Descrição</th>
+            <th>Valor da hora</th>
+            <th>Valor do dia</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
           </tr>
         </thead>
         <tbody>
